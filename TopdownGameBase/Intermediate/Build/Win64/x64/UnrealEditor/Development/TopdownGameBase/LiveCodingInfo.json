@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.TopdownGameBase.cpp.obj": [
+			"TopdownGameBase.cpp.obj"
+		]
+	}
+}
