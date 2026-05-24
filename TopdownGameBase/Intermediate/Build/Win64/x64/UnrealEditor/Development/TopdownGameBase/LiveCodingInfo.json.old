@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.TopdownGameBase.cpp.obj": [
+			"TopdownGameBase.init.gen.cpp.obj",
+			"UserPlayerController.gen.cpp.obj",
+			"TopdownGameBase.cpp.obj",
+			"UserPlayerController.cpp.obj"
+		]
+	}
+}

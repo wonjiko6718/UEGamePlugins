@@ -26,6 +26,8 @@ public class TopdownGameBase : ModuleRules
 			new string[]
 			{
 				"Core",
+                "InputCore",
+                "EnhancedInput"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

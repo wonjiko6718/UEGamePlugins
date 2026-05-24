@@ -257,8 +257,11 @@
 /I "Developer\PhysicsUtilities\Public"
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\WidgetRegistration\UHT"
 /I "Developer\WidgetRegistration\Public"
+/I "C:\Users\wonji\Desktop\UEProjects\UntilWeGoing\Plugins\TopdownGameBase\Intermediate\Build\Win64\UnrealEditor\Inc\TopdownGameBase\UHT"
 /I "C:\Users\wonji\Desktop\UEProjects\UntilWeGoing\Plugins\TopdownGameBase\Source"
 /I "C:\Users\wonji\Desktop\UEProjects\UntilWeGoing\Plugins\TopdownGameBase\Source\TopdownGameBase\Public"
+/I "..\Plugins\EnhancedInput\Intermediate\Build\Win64\UnrealEditor\Inc\EnhancedInput\UHT"
+/I "..\Plugins\EnhancedInput\Source\EnhancedInput\Public"
 /external:W0
 /external:I "ThirdParty\mimalloc\include"
 /external:I "ThirdParty\LibTiff\Source\Win64"
