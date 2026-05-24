@@ -7,6 +7,8 @@
 #include "InputActionValue.h"
 #include "InputMappingContext.h"
 #include "InputAction.h"
+#include "TopdownCharacterBase.h"
+
 #include "UserPlayerController.generated.h"
 
 /**
@@ -18,6 +20,8 @@ class TOPDOWNGAMEBASE_API AUserPlayerController : public APlayerController
 	GENERATED_BODY()
 	
 public:
+    AUserPlayerController();
+
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
     UInputMappingContext* DefaultMappingContext;
 
@@ -30,8 +34,12 @@ public:
 protected:
     virtual void BeginPlay() override;
     virtual void SetupInputComponent() override;
+    virtual void OnPossess(APawn* aPawn) override;
 
 private:
+    UPROPERTY(VisibleAnywhere, Category = "Owner")
+    ATopdownCharacterBase* OwnerCharacter;
+
     void Move(const FInputActionValue& Value);
     void OnJump(const FInputActionValue& Value);
 

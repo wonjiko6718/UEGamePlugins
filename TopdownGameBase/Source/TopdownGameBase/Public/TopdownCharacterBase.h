@@ -31,6 +31,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Camera")
 	UCameraComponent* Camera;
 
-
+	void Move(const FVector2D& MovementVector);
 
 };

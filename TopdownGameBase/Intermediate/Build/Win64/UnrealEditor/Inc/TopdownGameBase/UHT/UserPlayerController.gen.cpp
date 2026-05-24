@@ -12,6 +12,7 @@ void EmptyLinkFunctionForGeneratedCodeUserPlayerController() {}
 	ENGINE_API UClass* Z_Construct_UClass_APlayerController();
 	ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
 	ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
+	TOPDOWNGAMEBASE_API UClass* Z_Construct_UClass_ATopdownCharacterBase_NoRegister();
 	TOPDOWNGAMEBASE_API UClass* Z_Construct_UClass_AUserPlayerController();
 	TOPDOWNGAMEBASE_API UClass* Z_Construct_UClass_AUserPlayerController_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_TopdownGameBase();
@@ -42,6 +43,10 @@ void EmptyLinkFunctionForGeneratedCodeUserPlayerController() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_JumpAction_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_JumpAction;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_OwnerCharacter_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_OwnerCharacter;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -82,10 +87,18 @@ void EmptyLinkFunctionForGeneratedCodeUserPlayerController() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AUserPlayerController_Statics::NewProp_JumpAction = { "JumpAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUserPlayerController, JumpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AUserPlayerController_Statics::NewProp_JumpAction_MetaData), Z_Construct_UClass_AUserPlayerController_Statics::NewProp_JumpAction_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AUserPlayerController_Statics::NewProp_OwnerCharacter_MetaData[] = {
+		{ "Category", "Owner" },
+		{ "ModuleRelativePath", "Public/UserPlayerController.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AUserPlayerController_Statics::NewProp_OwnerCharacter = { "OwnerCharacter", nullptr, (EPropertyFlags)0x0040000000020001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AUserPlayerController, OwnerCharacter), Z_Construct_UClass_ATopdownCharacterBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AUserPlayerController_Statics::NewProp_OwnerCharacter_MetaData), Z_Construct_UClass_AUserPlayerController_Statics::NewProp_OwnerCharacter_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AUserPlayerController_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUserPlayerController_Statics::NewProp_DefaultMappingContext,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUserPlayerController_Statics::NewProp_MoveAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUserPlayerController_Statics::NewProp_JumpAction,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AUserPlayerController_Statics::NewProp_OwnerCharacter,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AUserPlayerController_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AUserPlayerController>::IsAbstract,
@@ -118,7 +131,6 @@ void EmptyLinkFunctionForGeneratedCodeUserPlayerController() {}
 	{
 		return AUserPlayerController::StaticClass();
 	}
-	AUserPlayerController::AUserPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AUserPlayerController);
 	AUserPlayerController::~AUserPlayerController() {}
 	struct Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_UserPlayerController_h_Statics
@@ -126,9 +138,9 @@ void EmptyLinkFunctionForGeneratedCodeUserPlayerController() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_UserPlayerController_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AUserPlayerController, AUserPlayerController::StaticClass, TEXT("AUserPlayerController"), &Z_Registration_Info_UClass_AUserPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUserPlayerController), 1896320313U) },
+		{ Z_Construct_UClass_AUserPlayerController, AUserPlayerController::StaticClass, TEXT("AUserPlayerController"), &Z_Registration_Info_UClass_AUserPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AUserPlayerController), 4232331493U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_UserPlayerController_h_3585762779(TEXT("/Script/TopdownGameBase"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_UserPlayerController_h_4143869147(TEXT("/Script/TopdownGameBase"),
 		Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_UserPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_UserPlayerController_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -6,6 +6,9 @@
         "PCH": "c:\\unrealengine-5.3.2-release\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
         "Includes": [
             "c:\\users\\wonji\\desktop\\ueprojects\\untilwegoing\\plugins\\topdowngamebase\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\topdowngamebase\\definitions.topdowngamebase.h",
+            "c:\\users\\wonji\\desktop\\ueprojects\\untilwegoing\\plugins\\topdowngamebase\\intermediate\\build\\win64\\unrealeditor\\inc\\topdowngamebase\\uht\\topdownaniminstancebase.gen.cpp",
+            "c:\\users\\wonji\\desktop\\ueprojects\\untilwegoing\\plugins\\topdowngamebase\\source\\topdowngamebase\\public\\topdownaniminstancebase.h",
+            "c:\\users\\wonji\\desktop\\ueprojects\\untilwegoing\\plugins\\topdowngamebase\\intermediate\\build\\win64\\unrealeditor\\inc\\topdowngamebase\\uht\\topdownaniminstancebase.generated.h",
             "c:\\users\\wonji\\desktop\\ueprojects\\untilwegoing\\plugins\\topdowngamebase\\intermediate\\build\\win64\\unrealeditor\\inc\\topdowngamebase\\uht\\topdowncharacterbase.gen.cpp",
             "c:\\users\\wonji\\desktop\\ueprojects\\untilwegoing\\plugins\\topdowngamebase\\source\\topdowngamebase\\public\\topdowncharacterbase.h",
             "c:\\unrealengine-5.3.2-release\\engine\\source\\runtime\\engine\\public\\engineminimal.h",
@@ -220,6 +223,7 @@
             "c:\\unrealengine-5.3.2-release\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedactionkeymapping.generated.h",
             "c:\\unrealengine-5.3.2-release\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputmappingcontext.generated.h",
             "c:\\users\\wonji\\desktop\\ueprojects\\untilwegoing\\plugins\\topdowngamebase\\intermediate\\build\\win64\\unrealeditor\\inc\\topdowngamebase\\uht\\userplayercontroller.generated.h",
+            "c:\\users\\wonji\\desktop\\ueprojects\\untilwegoing\\plugins\\topdowngamebase\\source\\topdowngamebase\\private\\topdownaniminstancebase.cpp",
             "c:\\users\\wonji\\desktop\\ueprojects\\untilwegoing\\plugins\\topdowngamebase\\source\\topdowngamebase\\private\\topdowncharacterbase.cpp",
             "c:\\users\\wonji\\desktop\\ueprojects\\untilwegoing\\plugins\\topdowngamebase\\source\\topdowngamebase\\private\\topdowngamebase.cpp",
             "c:\\users\\wonji\\desktop\\ueprojects\\untilwegoing\\plugins\\topdowngamebase\\source\\topdowngamebase\\public\\topdowngamebase.h",

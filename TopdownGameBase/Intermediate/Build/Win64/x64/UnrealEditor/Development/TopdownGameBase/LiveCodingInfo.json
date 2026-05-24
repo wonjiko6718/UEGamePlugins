@@ -2,9 +2,11 @@
 	"RemapUnityFiles": 
 	{
 		"Module.TopdownGameBase.cpp.obj": [
+			"TopdownAnimInstanceBase.gen.cpp.obj",
 			"TopdownCharacterBase.gen.cpp.obj",
 			"TopdownGameBase.init.gen.cpp.obj",
 			"UserPlayerController.gen.cpp.obj",
+			"TopdownAnimInstanceBase.cpp.obj",
 			"TopdownCharacterBase.cpp.obj",
 			"TopdownGameBase.cpp.obj",
 			"UserPlayerController.cpp.obj"

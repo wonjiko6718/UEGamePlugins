@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeTopdownGameBase_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xB0B4C03D,
-				0xE16011F3,
+				0xC0068594,
+				0xA4FE40A4,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_TopdownGameBase.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_TopdownGameBase.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_TopdownGameBase(Z_Construct_UPackage__Script_TopdownGameBase, TEXT("/Script/TopdownGameBase"), Z_Registration_Info_UPackage__Script_TopdownGameBase, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xB0B4C03D, 0xE16011F3));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_TopdownGameBase(Z_Construct_UPackage__Script_TopdownGameBase, TEXT("/Script/TopdownGameBase"), Z_Registration_Info_UPackage__Script_TopdownGameBase, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xC0068594, 0xA4FE40A4));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
