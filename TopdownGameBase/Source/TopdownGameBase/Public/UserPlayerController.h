@@ -22,26 +22,33 @@ class TOPDOWNGAMEBASE_API AUserPlayerController : public APlayerController
 public:
     AUserPlayerController();
 
+    //Actions Mapping
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
     UInputMappingContext* DefaultMappingContext;
-
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
     UInputAction* MoveAction;
-
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
     UInputAction* JumpAction;
-
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
+    UInputAction* SprintAction;
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
+    UInputAction* EquipAction;
 protected:
     virtual void BeginPlay() override;
     virtual void SetupInputComponent() override;
     virtual void OnPossess(APawn* aPawn) override;
+    virtual void AcknowledgePossession(APawn* P) override;
 
 private:
     UPROPERTY(VisibleAnywhere, Category = "Owner")
     ATopdownCharacterBase* OwnerCharacter;
 
-    void Move(const FInputActionValue& Value);
-    void OnJump(const FInputActionValue& Value);
+    void CallMove(const FInputActionValue& Value);
+    void CallJump(const FInputActionValue& Value);
+    void CallSprintStart(const FInputActionValue& Value);
+    void CallSprintDone(const FInputActionValue& Value);
+    void CallEquip(const FInputActionValue& Value);
+
 
 
 };

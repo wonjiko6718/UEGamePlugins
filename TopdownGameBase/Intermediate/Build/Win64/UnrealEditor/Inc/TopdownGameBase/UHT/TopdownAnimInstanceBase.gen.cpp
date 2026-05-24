@@ -11,6 +11,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeTopdownAnimInstanceBase() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_UAnimInstance();
+	TOPDOWNGAMEBASE_API UClass* Z_Construct_UClass_ATopdownCharacterBase_NoRegister();
 	TOPDOWNGAMEBASE_API UClass* Z_Construct_UClass_UTopdownAnimInstanceBase();
 	TOPDOWNGAMEBASE_API UClass* Z_Construct_UClass_UTopdownAnimInstanceBase_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_TopdownGameBase();
@@ -38,6 +39,15 @@ void EmptyLinkFunctionForGeneratedCodeTopdownAnimInstanceBase() {}
 #endif
 		static void NewProp_bIsInAir_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsInAir;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bIsRunning_MetaData[];
+#endif
+		static void NewProp_bIsRunning_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsRunning;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_OwnerCharacter_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_OwnerCharacter;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -75,9 +85,29 @@ void EmptyLinkFunctionForGeneratedCodeTopdownAnimInstanceBase() {}
 		((UTopdownAnimInstanceBase*)Obj)->bIsInAir = 1;
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_bIsInAir = { "bIsInAir", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UTopdownAnimInstanceBase), &Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_bIsInAir_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_bIsInAir_MetaData), Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_bIsInAir_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_bIsRunning_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Public/TopdownAnimInstanceBase.h" },
+	};
+#endif
+	void Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_bIsRunning_SetBit(void* Obj)
+	{
+		((UTopdownAnimInstanceBase*)Obj)->bIsRunning = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_bIsRunning = { "bIsRunning", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UTopdownAnimInstanceBase), &Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_bIsRunning_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_bIsRunning_MetaData), Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_bIsRunning_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_OwnerCharacter_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Public/TopdownAnimInstanceBase.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_OwnerCharacter = { "OwnerCharacter", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTopdownAnimInstanceBase, OwnerCharacter), Z_Construct_UClass_ATopdownCharacterBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_OwnerCharacter_MetaData), Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_OwnerCharacter_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_Speed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_bIsInAir,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_bIsRunning,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::NewProp_OwnerCharacter,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UTopdownAnimInstanceBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UTopdownAnimInstanceBase>::IsAbstract,
@@ -118,9 +148,9 @@ void EmptyLinkFunctionForGeneratedCodeTopdownAnimInstanceBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_TopdownAnimInstanceBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UTopdownAnimInstanceBase, UTopdownAnimInstanceBase::StaticClass, TEXT("UTopdownAnimInstanceBase"), &Z_Registration_Info_UClass_UTopdownAnimInstanceBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTopdownAnimInstanceBase), 2742658536U) },
+		{ Z_Construct_UClass_UTopdownAnimInstanceBase, UTopdownAnimInstanceBase::StaticClass, TEXT("UTopdownAnimInstanceBase"), &Z_Registration_Info_UClass_UTopdownAnimInstanceBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTopdownAnimInstanceBase), 3875102570U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_TopdownAnimInstanceBase_h_3290150120(TEXT("/Script/TopdownGameBase"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_TopdownAnimInstanceBase_h_2530135576(TEXT("/Script/TopdownGameBase"),
 		Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_TopdownAnimInstanceBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_TopdownAnimInstanceBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

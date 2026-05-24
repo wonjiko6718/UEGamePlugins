@@ -8,10 +8,11 @@
 void UTopdownAnimInstanceBase::NativeUpdateAnimation(float DeltaSeconds)
 {
 	Super::NativeUpdateAnimation(DeltaSeconds);
-    ACharacter* OwnerCharacter = Cast<ACharacter>(GetOwningActor());
+    OwnerCharacter = Cast<ATopdownCharacterBase>(GetOwningActor());
     if (!OwnerCharacter) return;
 
-    // 속도 계산 (수평 속도만)
     Speed = OwnerCharacter->GetCharacterMovement()->Velocity.Size2D();
     bIsInAir = OwnerCharacter->GetCharacterMovement()->IsFalling();
+    bIsRunning = OwnerCharacter->bIsRunning;
+    UE_LOG(LogTemp, Warning, TEXT("Speed: %f"), Speed);
 }

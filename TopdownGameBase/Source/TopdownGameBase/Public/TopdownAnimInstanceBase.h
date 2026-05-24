@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Animation/AnimInstance.h"
+#include "TopdownCharacterBase.h"
 #include "TopdownAnimInstanceBase.generated.h"
 
 /**
@@ -19,5 +20,9 @@ public:
 	float Speed = 0.f;
 	UPROPERTY(BlueprintReadOnly, Category = "Movement")
 	bool bIsInAir = false;
+	UPROPERTY(BlueprintReadOnly, Category = "Movement")
+	bool bIsRunning = false;
+	UPROPERTY(BlueprintReadOnly, Category = "Movement")
+	ATopdownCharacterBase* OwnerCharacter;
 
 };
