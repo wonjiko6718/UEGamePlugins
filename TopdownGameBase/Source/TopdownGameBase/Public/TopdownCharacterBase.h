@@ -31,7 +31,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Camera")
 	UCameraComponent* Camera;
 
-	UPROPERTY(Replicated, EditAnywhere, BlueprintReadOnly, Category = "Movement")
+	UPROPERTY(ReplicatedUsing = OnRep_IsRunning, EditAnywhere, BlueprintReadOnly, Category = "Movement")
 	bool bIsRunning = false; // Variable for Check Sprint
 
 	void CallMove(const FVector2D& MovementVector);
@@ -43,4 +43,8 @@ public:
 	void ServerCallSprintDone();
 	UFUNCTION(Server, Reliable)
 	void ServerCallEquip();
+
+	//Replicated - Action Func.
+	UFUNCTION()
+	void OnRep_IsRunning();
 };

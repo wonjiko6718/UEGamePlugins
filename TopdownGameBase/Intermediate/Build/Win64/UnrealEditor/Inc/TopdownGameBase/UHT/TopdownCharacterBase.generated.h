@@ -22,6 +22,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	virtual void ServerCallSprintDone_Implementation(); \
 	virtual void ServerCallSprintStart_Implementation(); \
  \
+	DECLARE_FUNCTION(execOnRep_IsRunning); \
 	DECLARE_FUNCTION(execServerCallEquip); \
 	DECLARE_FUNCTION(execServerCallSprintDone); \
 	DECLARE_FUNCTION(execServerCallSprintStart);

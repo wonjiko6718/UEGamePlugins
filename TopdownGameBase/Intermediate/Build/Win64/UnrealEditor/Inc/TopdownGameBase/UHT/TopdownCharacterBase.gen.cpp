@@ -16,6 +16,13 @@ void EmptyLinkFunctionForGeneratedCodeTopdownCharacterBase() {}
 	TOPDOWNGAMEBASE_API UClass* Z_Construct_UClass_ATopdownCharacterBase_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_TopdownGameBase();
 // End Cross Module References
+	DEFINE_FUNCTION(ATopdownCharacterBase::execOnRep_IsRunning)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRep_IsRunning();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ATopdownCharacterBase::execServerCallEquip)
 	{
 		P_FINISH;
@@ -56,11 +63,40 @@ void EmptyLinkFunctionForGeneratedCodeTopdownCharacterBase() {}
 	{
 		UClass* Class = ATopdownCharacterBase::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "OnRep_IsRunning", &ATopdownCharacterBase::execOnRep_IsRunning },
 			{ "ServerCallEquip", &ATopdownCharacterBase::execServerCallEquip },
 			{ "ServerCallSprintDone", &ATopdownCharacterBase::execServerCallSprintDone },
 			{ "ServerCallSprintStart", &ATopdownCharacterBase::execServerCallSprintStart },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ATopdownCharacterBase_OnRep_IsRunning_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATopdownCharacterBase_OnRep_IsRunning_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//Replicated - Action Func.\n" },
+#endif
+		{ "ModuleRelativePath", "Public/TopdownCharacterBase.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Replicated - Action Func." },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ATopdownCharacterBase_OnRep_IsRunning_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATopdownCharacterBase, nullptr, "OnRep_IsRunning", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ATopdownCharacterBase_OnRep_IsRunning_Statics::Function_MetaDataParams), Z_Construct_UFunction_ATopdownCharacterBase_OnRep_IsRunning_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ATopdownCharacterBase_OnRep_IsRunning()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ATopdownCharacterBase_OnRep_IsRunning_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ATopdownCharacterBase_ServerCallEquip_Statics
 	{
@@ -169,6 +205,7 @@ void EmptyLinkFunctionForGeneratedCodeTopdownCharacterBase() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ATopdownCharacterBase_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATopdownCharacterBase_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ATopdownCharacterBase_OnRep_IsRunning, "OnRep_IsRunning" }, // 1694945116
 		{ &Z_Construct_UFunction_ATopdownCharacterBase_ServerCallEquip, "ServerCallEquip" }, // 690817767
 		{ &Z_Construct_UFunction_ATopdownCharacterBase_ServerCallSprintDone, "ServerCallSprintDone" }, // 3897840786
 		{ &Z_Construct_UFunction_ATopdownCharacterBase_ServerCallSprintStart, "ServerCallSprintStart" }, // 2262152438
@@ -207,7 +244,7 @@ void EmptyLinkFunctionForGeneratedCodeTopdownCharacterBase() {}
 	{
 		((ATopdownCharacterBase*)Obj)->bIsRunning = 1;
 	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ATopdownCharacterBase_Statics::NewProp_bIsRunning = { "bIsRunning", nullptr, (EPropertyFlags)0x0010000000000035, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ATopdownCharacterBase), &Z_Construct_UClass_ATopdownCharacterBase_Statics::NewProp_bIsRunning_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ATopdownCharacterBase_Statics::NewProp_bIsRunning_MetaData), Z_Construct_UClass_ATopdownCharacterBase_Statics::NewProp_bIsRunning_MetaData) };
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ATopdownCharacterBase_Statics::NewProp_bIsRunning = { "bIsRunning", "OnRep_IsRunning", (EPropertyFlags)0x0010000100000035, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ATopdownCharacterBase), &Z_Construct_UClass_ATopdownCharacterBase_Statics::NewProp_bIsRunning_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ATopdownCharacterBase_Statics::NewProp_bIsRunning_MetaData), Z_Construct_UClass_ATopdownCharacterBase_Statics::NewProp_bIsRunning_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATopdownCharacterBase_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopdownCharacterBase_Statics::NewProp_SpringArm,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopdownCharacterBase_Statics::NewProp_Camera,
@@ -261,9 +298,9 @@ void EmptyLinkFunctionForGeneratedCodeTopdownCharacterBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_TopdownCharacterBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATopdownCharacterBase, ATopdownCharacterBase::StaticClass, TEXT("ATopdownCharacterBase"), &Z_Registration_Info_UClass_ATopdownCharacterBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopdownCharacterBase), 2246606360U) },
+		{ Z_Construct_UClass_ATopdownCharacterBase, ATopdownCharacterBase::StaticClass, TEXT("ATopdownCharacterBase"), &Z_Registration_Info_UClass_ATopdownCharacterBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopdownCharacterBase), 2156347195U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_TopdownCharacterBase_h_2770155555(TEXT("/Script/TopdownGameBase"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_TopdownCharacterBase_h_3262201730(TEXT("/Script/TopdownGameBase"),
 		Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_TopdownCharacterBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_wonji_Desktop_UEProjects_UntilWeGoing_Plugins_TopdownGameBase_Source_TopdownGameBase_Public_TopdownCharacterBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

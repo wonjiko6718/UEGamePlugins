@@ -14,5 +14,4 @@ void UTopdownAnimInstanceBase::NativeUpdateAnimation(float DeltaSeconds)
     Speed = OwnerCharacter->GetCharacterMovement()->Velocity.Size2D();
     bIsInAir = OwnerCharacter->GetCharacterMovement()->IsFalling();
     bIsRunning = OwnerCharacter->bIsRunning;
-    UE_LOG(LogTemp, Warning, TEXT("Speed: %f"), Speed);
 }

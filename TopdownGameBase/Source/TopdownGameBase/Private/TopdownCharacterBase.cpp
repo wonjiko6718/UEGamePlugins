@@ -60,6 +60,10 @@ void ATopdownCharacterBase::CallMove(const FVector2D& MovementVector)
 	AddMovementInput(ForwardDirection, MovementVector.Y);
 	AddMovementInput(RightDirection, MovementVector.X);
 }
+void ATopdownCharacterBase::OnRep_IsRunning()
+{
+	GetCharacterMovement()->MaxWalkSpeed = bIsRunning ? 600.f : 300.f;
+}
 void ATopdownCharacterBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const // Server Replicated Variables
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
